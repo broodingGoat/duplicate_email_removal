@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Duplicate Email Removal Simulation</h2>
+    <p>
+        This program sorts 100k random email user ids, with duplicates.
+        It generates 12 character random email IDs & repeats them randomly with duplicates.
+     </p>
+
+    <p>
+        To remove duplicates, I have implemented custom hashmap implementation - OrderdHash
+            <li>Iterate over email list</li>
+            <li>Implements insert, hash & rehashing to only store unique values</li>
+            <li>When inserting a unique value it will update (in order) an internal array</li>
+            <li>In order array does not get updated if a duplicate id insertion is attempted</li>
+    </p>
+    <p>
+        On hitting button below, you will see:
+            <li>Sample of emails</li>
+            <li>Sample of in order emails (with no duplicates)</li>
+            <li>Stats & test</li>
+
+    </p>
+    <form action="." method="POST">
+        <input type="submit" name="sort_email" value="Lets remove some duplicates !">
+    </form>
+    <p>To re-run just return back via browser :)</p>
+</body>
+</html>

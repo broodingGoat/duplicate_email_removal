@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Sample for Emails (with duplicates)</h2>
+    <p>{{sample_emails}}</p>
+
+    <h2>Sample post Ordered removal of duplicates (using OrderedHash)</h2>
+    <p>{{sample_ordered_list}}</p>
+
+    <h2>Results from duplicate removal</h2>
+    <li>Sorting using OrderedHash started at {{start_time}} GMT</li>
+    <li>Sorting using OrderedHash started at {{stop_time}} GMT</li>
+    <li>Time to complete removal: {{duration}} sec.</li>
+    <li>Unique IDs found using OrderedHash: {{unique_ids_using_ordered_hash}}</li>
+    <li>Unique IDs found using test function (leveraging python native dict): {{unique_ids_using_test}}</li>
+</body>
+</html>
