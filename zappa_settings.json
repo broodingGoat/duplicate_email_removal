@@ -1,0 +1,9 @@
+{
+    "dev": {
+        "app_function": "main.app", 
+        "profile_name": "parentassist", 
+        "s3_bucket": "zappa-remove-duplicate-emails",
+        "timeout_seconds": 300,
+        "memory_size": 1536
+    }
+}

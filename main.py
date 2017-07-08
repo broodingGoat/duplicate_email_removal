@@ -1,7 +1,6 @@
 __author__ = 'smujoo'
 
 from flask import Flask
-from flask import request
 from flask import render_template
 from OrderedHash import OrderedHash
 import random
@@ -46,9 +45,11 @@ def generate_sample(somelist):
     return somelist[slice:slice+50]
 
 app = Flask(__name__)
+
 @app.route('/')
-def my_page():
+def main():
     return render_template("ordered_hash_template.html")
+
 
 @app.route('/', methods=['POST'])
 def sort_email():
@@ -73,9 +74,9 @@ def sort_email():
 
     sample_emails = generate_sample(emails)
     sample_ordered_list = generate_sample(myhash.ordered_list)
-    return render_template('sort_stats.html', sample_emails=sample_emails, sample_ordered_list=sample_ordered_list, duration=duration, unique_ids_using_ordered_hash=unique_ids_using_ordered_hash, unique_ids_using_test=unique_ids_using_test)
+    return render_template('sort_stats.html', sample_emails=sample_emails, start_time=start_time, stop_time=stop_time, sample_ordered_list=sample_ordered_list, duration=duration, unique_ids_using_ordered_hash=unique_ids_using_ordered_hash, unique_ids_using_test=unique_ids_using_test)
+
 
 if __name__ == '__main__':
-    app.run()
-
+    app.run(host='0.0.0.0', debug=True)
 
